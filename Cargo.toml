@@ -1,0 +1,24 @@
+[package]
+name = "malloc-info"
+version = "0.1.0"
+authors = [
+  "ApertureC Team <aperturec@zetier.com>",
+  "Joe Kale <joe@zetier.com>"
+]
+edition = "2021"
+rust-version = "1.63.0"
+description = "A safe wrapper around glibc's malloc_info"
+repository = "https://github.com/zetier/malloc-info-rs"
+license = "MIT OR Apache-2.0"
+keywords = ["malloc", "glibc", "memory", "debugging"]
+categories = ["development-tools", "memory-management"]
+
+[dependencies]
+errno = "0.3"
+libc = "0.2"
+quick-xml = { version = "0.37", features = ["serialize"] }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2.0"
+
+[dev-dependencies]
+tokio = { version = "1.43", features = ["macros", "rt"] }
