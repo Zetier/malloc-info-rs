@@ -6,7 +6,7 @@
 use serde::Deserialize;
 
 /// Types of arena space
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub enum AspaceType {
     Total,
@@ -17,7 +17,7 @@ pub enum AspaceType {
 }
 
 /// Arena space information
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct Aspace {
     #[serde(rename = "@type")]
@@ -27,7 +27,7 @@ pub struct Aspace {
 }
 
 /// Types of system memory
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub enum SystemType {
     Current,
@@ -37,7 +37,7 @@ pub enum SystemType {
 }
 
 /// System memory information
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct System {
     #[serde(rename = "@type")]
@@ -47,7 +47,7 @@ pub struct System {
 }
 
 /// Types of total memory
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub enum TotalType {
     Fast,
@@ -58,7 +58,7 @@ pub enum TotalType {
 }
 
 /// Total memory information
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct Total {
     #[serde(rename = "@type")]
@@ -70,7 +70,7 @@ pub struct Total {
 }
 
 /// Size information for an arena or the whole heap
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub enum Size {
     Size {
@@ -96,7 +96,7 @@ pub enum Size {
 }
 
 /// Wrapper type for sizes, which may be an array of XML elements
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct Sizes {
     #[serde(rename = "$value")]
@@ -104,7 +104,7 @@ pub struct Sizes {
 }
 
 /// Arena-specific heap information
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct Heap {
     /// Arena number
@@ -116,7 +116,7 @@ pub struct Heap {
 }
 
 /// Top-level type for all stats returned from [`malloc_info`](crate::malloc_info)
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 pub struct Malloc {
     #[serde(rename = "@version")]
