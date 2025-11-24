@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+## [0.1.3](https://github.com/Zetier/malloc-info-rs/compare/v0.1.2...v0.1.3) - 2025-11-24
+
+### Other
+
+- *(deps)* update quick-xml requirement from 0.37 to 0.38
+
 ## [0.1.2](https://github.com/Zetier/malloc-info-rs/compare/v0.1.1...v0.1.2) - 2025-01-16
 
 ### Added
